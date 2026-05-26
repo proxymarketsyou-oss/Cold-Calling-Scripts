@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel G — 4 Steps to Close · Marketing Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0c;
+    --surface: #111114;
+    --surface2: #18181c;
+    --surface3: #1f1f25;
+    --border: #252530;
+    --border2: #2e2e3c;
+    --text: #f0f0f5;
+    --text2: #8888a0;
+    --text3: #44445a;
+    --gold: #e8b84b;
+    --gold-dim: #1c1608;
+    --gold-border: #3a2e0e;
+    --orange: #f07340;
+    --orange-dim: #1c0e06;
+    --orange-border: #3a1c0a;
+    --green: #3ed98a;
+    --green-dim: #081a10;
+    --green-border: #0e3020;
+    --blue: #4a9eff;
+    --blue-dim: #060f1c;
+    --blue-border: #0e2340;
+    --red: #ff5a5a;
+    --red-dim: #1a0808;
+    --red-border: #3a1010;
+    --purple: #b07eff;
+    --purple-dim: #120a20;
+    --purple-border: #2a1848;
+    --teal: #2dd4bf;
+    --teal-dim: #051412;
+    --teal-border: #0a2e2a;
+    --radius: 6px;
+    --radius-lg: 10px;
+    --font: 'Syne', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.65; min-height: 100vh; }
+
+  /* ── Header ── */
+  .page-header {
+    padding: 24px 48px 18px;
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0;
+    background: rgba(10,10,12,0.97);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+  }
+  .header-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+  .header-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; font-family: var(--mono); }
+  .page-header h1 { font-size: 19px; font-weight: 800; letter-spacing: -0.02em; }
+  .header-sub { font-size: 11px; color: var(--text3); margin-top: 3px; font-family: var(--mono); }
+  .fw-pills { display: flex; gap: 5px; align-items: center; flex-shrink: 0; flex-wrap: wrap; justify-content: flex-end; }
+  .fw-pill { display: flex; align-items: center; gap: 6px; padding: 5px 11px; border-radius: 999px; border: 1px solid var(--border); font-size: 11px; font-weight: 700; letter-spacing: 0.04em; font-family: var(--mono); }
+  .fw-pill-n { width: 17px; height: 17px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 800; }
+  .nav-tabs { display: flex; gap: 4px; margin-top: 14px; flex-wrap: wrap; }
+  .nav-tab { padding: 6px 14px; font-size: 11px; font-weight: 700; letter-spacing: 0.05em; border-radius: var(--radius); border: 1px solid var(--border); background: transparent; color: var(--text2); cursor: pointer; transition: all 0.15s; font-family: var(--font); text-transform: uppercase; }
+  .nav-tab:hover { border-color: var(--border2); color: var(--text); }
+  .nav-tab.active { color: var(--text); border-color: var(--border2); background: var(--surface2); }
+  .nav-tab.t-meta.active   { background: var(--gold-dim);   border-color: var(--gold-border);   color: var(--gold);   }
+  .nav-tab.t-web.active    { background: var(--blue-dim);   border-color: var(--blue-border);   color: var(--blue);   }
+  .nav-tab.t-social.active { background: var(--green-dim);  border-color: var(--green-border);  color: var(--green);  }
+  .nav-tab.t-pivot.active  { background: var(--teal-dim);   border-color: var(--teal-border);   color: var(--teal);   }
+  .nav-tab.t-obj.active    { background: var(--red-dim);    border-color: var(--red-border);    color: var(--red);    }
+
+  /* ── Layout ── */
+  .main { max-width: 960px; margin: 0 auto; padding: 36px 48px 80px; }
+  .panel { display: none; }
+  .panel.active { display: block; animation: fadeUp 0.2s ease; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* ── Framework bar ── */
+  .dg-bar { display: grid; grid-template-columns: repeat(4,1fr); gap: 6px; margin-bottom: 28px; }
+  .dg-card { border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 12px 14px; background: var(--surface); }
+  .dg-card-step { font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 5px; font-family: var(--mono); display: flex; align-items: center; gap: 5px; }
+  .dg-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .dg-card-title { font-size: 13px; font-weight: 800; color: var(--text); margin-bottom: 3px; }
+  .dg-card-sub { font-size: 11px; color: var(--text2); line-height: 1.5; font-family: var(--mono); }
+  .dg-1 { border-top: 2px solid var(--gold); }   .dg-1 .dg-card-step { color: var(--gold); }   .dg-1 .dg-dot { background: var(--gold); }
+  .dg-2 { border-top: 2px solid var(--blue); }   .dg-2 .dg-card-step { color: var(--blue); }   .dg-2 .dg-dot { background: var(--blue); }
+  .dg-3 { border-top: 2px solid var(--green); }  .dg-3 .dg-card-step { color: var(--green); }  .dg-3 .dg-dot { background: var(--green); }
+  .dg-4 { border-top: 2px solid var(--orange); } .dg-4 .dg-card-step { color: var(--orange); } .dg-4 .dg-dot { background: var(--orange); }
+
+  /* ── Section header ── */
+  .script-header { margin-bottom: 24px; }
+  .script-badge { display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border-radius: 999px; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; font-family: var(--mono); }
+  .badge-meta   { background: var(--gold-dim);   color: var(--gold);   border: 1px solid var(--gold-border);   }
+  .badge-web    { background: var(--blue-dim);   color: var(--blue);   border: 1px solid var(--blue-border);   }
+  .badge-social { background: var(--green-dim);  color: var(--green);  border: 1px solid var(--green-border);  }
+  .badge-pivot  { background: var(--teal-dim);   color: var(--teal);   border: 1px solid var(--teal-border);   }
+  .badge-obj    { background: var(--red-dim);    color: var(--red);    border: 1px solid var(--red-border);    }
+  .script-header h2 { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 5px; }
+  .script-header p  { font-size: 12px; color: var(--text2); font-family: var(--mono); }
+
+  /* ── Steps ── */
+  .steps { display: flex; flex-direction: column; gap: 3px; }
+  .step { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; transition: border-color 0.15s; }
+  .step:hover { border-color: var(--border2); }
+  .step[data-dg="1"] { border-left: 3px solid var(--gold); }
+  .step[data-dg="2"] { border-left: 3px solid var(--blue); }
+  .step[data-dg="3"] { border-left: 3px solid var(--green); }
+  .step[data-dg="4"] { border-left: 3px solid var(--orange); }
+  .step[data-dg="obj"] { border-left: 3px solid var(--red); }
+  .step[data-dg="pivot"] { border-left: 3px solid var(--teal); }
+  .step-header { display: flex; align-items: center; gap: 14px; padding: 15px 20px; cursor: pointer; user-select: none; }
+  .step-num { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; flex-shrink: 0; font-family: var(--mono); }
+  .num-meta   { background: var(--gold-dim);   color: var(--gold);   border: 1px solid var(--gold-border);   }
+  .num-web    { background: var(--blue-dim);   color: var(--blue);   border: 1px solid var(--blue-border);   }
+  .num-social { background: var(--green-dim);  color: var(--green);  border: 1px solid var(--green-border);  }
+  .num-orange { background: var(--orange-dim); color: var(--orange); border: 1px solid var(--orange-border); }
+  .num-teal   { background: var(--teal-dim);   color: var(--teal);   border: 1px solid var(--teal-border);   }
+  .num-red    { background: var(--red-dim);    color: var(--red);    border: 1px solid var(--red-border);    }
+  .step-meta-wrap { flex: 1; }
+  .step-phase { font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); margin-bottom: 2px; font-family: var(--mono); }
+  .step-title { font-size: 14px; font-weight: 700; color: var(--text); }
+  .step-chevron { width: 16px; height: 16px; color: var(--text3); transition: transform 0.2s; flex-shrink: 0; }
+  .step.open .step-chevron { transform: rotate(180deg); }
+  .step-body { display: none; padding: 0 20px 22px 66px; }
+  .step.open .step-body { display: block; }
+
+  /* ── Content blocks ── */
+  .label-tag { display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; padding: 2px 8px; border-radius: 3px; margin-bottom: 8px; margin-right: 4px; font-family: var(--mono); }
+  .tag-say   { background: var(--green-dim);  color: var(--green);  border: 1px solid var(--green-border); }
+  .tag-dg    { background: var(--gold-dim);   color: var(--gold);   border: 1px solid var(--gold-border);  }
+  .tag-psych { background: var(--purple-dim); color: var(--purple); border: 1px solid var(--purple-border);}
+  .tag-if    { background: var(--orange-dim); color: var(--orange); border: 1px solid var(--orange-border);}
+  .tag-obj   { background: var(--red-dim);    color: var(--red);    border: 1px solid var(--red-border);   }
+  .tag-pivot { background: var(--teal-dim);   color: var(--teal);   border: 1px solid var(--teal-border);  }
+
+  .quote-block {
+    background: var(--surface2); border: 1px solid var(--border);
+    border-left: 3px solid var(--green);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 13px 17px; margin: 8px 0;
+    font-size: 15px; line-height: 1.75; color: var(--text); font-style: italic;
+  }
+  .quote-block.alt   { border-left-color: var(--orange); }
+  .quote-block.info  { border-left-color: var(--blue); }
+  .quote-block.close { border-left-color: var(--gold); }
+  .quote-block.pivot { border-left-color: var(--teal); }
+  .quote-block.red   { border-left-color: var(--red); }
+
+  .note-block {
+    background: var(--purple-dim); border: 1px solid var(--purple-border);
+    border-radius: var(--radius); padding: 11px 15px; margin: 10px 0;
+    font-size: 13.5px; color: var(--text); line-height: 1.65;
+  }
+  .note-block.dg   { background: var(--gold-dim);   border-color: var(--gold-border);   }
+  .note-block.tip  { background: var(--blue-dim);   border-color: var(--blue-border);   }
+  .note-block.warn { background: var(--orange-dim); border-color: var(--orange-border); }
+  .note-block.teal { background: var(--teal-dim);   border-color: var(--teal-border);   }
+  .note-block span.nt { font-size: 9px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; opacity: 0.75; display: block; margin-bottom: 4px; font-family: var(--mono); }
+
+  .body-text { font-size: 14px; color: var(--text2); line-height: 1.7; margin: 8px 0; }
+  .body-text strong { color: var(--text); font-weight: 600; }
+
+  /* ── W Grid ── */
+  .w-grid { display: flex; flex-direction: column; gap: 7px; margin: 8px 0; }
+  .w-item { background: var(--surface3); border: 1px solid var(--border); border-radius: var(--radius); padding: 11px 15px; display: flex; gap: 12px; align-items: flex-start; }
+  .w-badge { font-size: 10px; font-weight: 800; font-family: var(--mono); padding: 3px 7px; border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-top: 2px; }
+  .w1 { background: var(--blue-dim);   color: var(--blue);   border: 1px solid var(--blue-border);   }
+  .w2 { background: var(--green-dim);  color: var(--green);  border: 1px solid var(--green-border);  }
+  .w3 { background: var(--purple-dim); color: var(--purple); border: 1px solid var(--purple-border); }
+  .w4 { background: var(--gold-dim);   color: var(--gold);   border: 1px solid var(--gold-border);   }
+  .w-text { font-size: 15px; font-style: italic; color: var(--text); line-height: 1.65; }
+
+  /* ── Objections ── */
+  .obj-set { display: flex; flex-direction: column; gap: 14px; margin: 8px 0; }
+  .obj-trigger { font-size: 11px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--red); margin-bottom: 5px; font-family: var(--mono); }
+
+  /* ── Pivot Items ── */
+  .pivot-list { display: flex; flex-direction: column; gap: 10px; margin: 8px 0; }
+  .pivot-item {
+    background: var(--teal-dim); border: 1px solid var(--teal-border);
+    border-radius: var(--radius); padding: 12px 16px;
+    cursor: pointer; transition: border-color 0.15s, background 0.15s;
+  }
+  .pivot-item:hover { border-color: var(--teal); background: #071e1c; }
+  .pivot-item::after { content: '↗ Click for full pivot script'; display: block; margin-top: 6px; font-size: 10px; font-weight: 700; letter-spacing: 0.06em; color: var(--teal); opacity: 0.7; font-family: var(--mono); }
+  .pivot-to { font-size: 11px; font-weight: 700; letter-spacing: 0.05em; color: var(--teal); margin-bottom: 5px; font-family: var(--mono); }
+  .pivot-text { font-size: 14px; color: var(--text); line-height: 1.65; }
+  .pivot-signal { font-size: 12px; color: var(--text2); font-style: italic; margin-bottom: 6px; }
+
+  /* ── Section divider ── */
+  .section-divider { height: 1px; background: var(--border); margin: 18px 0; }
+  .or-divider { display: flex; align-items: center; gap: 10px; margin: 16px 0; }
+  .or-divider::before,.or-divider::after { content:''; flex:1; height:1px; background:var(--border); }
+  .or-divider span { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text3); font-family: var(--mono); white-space: nowrap; }
+
+  /* ── Game plan ── */
+  .gameplan-grid { display: flex; flex-direction: column; gap: 7px; margin: 10px 0; }
+  .gp-item { background: var(--surface3); border: 1px solid var(--gold-border); border-radius: var(--radius); padding: 11px 15px; }
+  .gp-label { font-size: 10px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--gold); margin-bottom: 5px; font-family: var(--mono); }
+  .gp-text { font-size: 14px; font-style: italic; color: var(--text); line-height: 1.65; }
+
+  /* ── Pivot Chart Table ── */
+  .filter-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; }
+  .filter-btn { padding: 6px 14px; font-size: 11px; font-weight: 700; border-radius: 999px; border: 1px solid var(--border); background: transparent; color: var(--text2); cursor: pointer; transition: all 0.15s; font-family: var(--font); text-transform: uppercase; letter-spacing: 0.04em; }
+  .filter-btn:hover { border-color: var(--border2); color: var(--text); }
+  .filter-btn.active { background: var(--surface2); color: var(--text); border-color: var(--border2); }
+  .filter-btn.pf-meta.active   { background: var(--gold-dim);  color: var(--gold);  border-color: var(--gold-border);  }
+  .filter-btn.pf-web.active    { background: var(--blue-dim);  color: var(--blue);  border-color: var(--blue-border);  }
+  .filter-btn.pf-social.active { background: var(--green-dim); color: var(--green); border-color: var(--green-border); }
+  .pivot-table-wrap { overflow-x: auto; }
+  table.pt { width: 100%; border-collapse: collapse; font-size: 14px; }
+  table.pt th { text-align: left; padding: 9px 13px; font-size: 10px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text3); border-bottom: 1px solid var(--border); background: var(--surface); white-space: nowrap; font-family: var(--mono); }
+  table.pt td { padding: 11px 13px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.6; }
+  table.pt tr:hover td { background: var(--surface); cursor: pointer; }
+  table.pt tr.pr-hidden { display: none; }
+  .from-pill, .to-pill { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 10px; font-weight: 700; white-space: nowrap; font-family: var(--mono); }
+  .from-meta,.to-meta   { background: var(--gold-dim);  color: var(--gold);  border: 1px solid var(--gold-border);  }
+  .from-web,.to-web     { background: var(--blue-dim);  color: var(--blue);  border: 1px solid var(--blue-border);  }
+  .from-social,.to-social { background: var(--green-dim); color: var(--green); border: 1px solid var(--green-border); }
+  .signal-text { color: var(--text); font-size: 14px; }
+  .bridge-text { color: var(--text2); font-size: 13px; font-style: italic; margin-top: 4px; line-height: 1.65; }
+  .pivot-click-hint { font-size: 10px; color: var(--teal); font-weight: 700; margin-top: 4px; display: block; opacity: 0.8; font-family: var(--mono); }
+
+  /* ── Modal ── */
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 500; backdrop-filter: blur(5px); align-items: flex-start; justify-content: center; padding: 40px 20px; overflow-y: auto; }
+  .modal-overlay.open { display: flex; }
+  .modal { background: var(--surface); border: 1px solid var(--border2); border-radius: 14px; width: 100%; max-width: 720px; padding: 30px; position: relative; margin: auto; }
+  .modal-close { position: absolute; top: 14px; right: 14px; background: var(--surface2); border: 1px solid var(--border); border-radius: 5px; color: var(--text2); font-size: 12px; padding: 5px 11px; cursor: pointer; font-family: var(--font); transition: all 0.15s; }
+  .modal-close:hover { color: var(--text); border-color: var(--border2); }
+  .modal-eyebrow { display: flex; align-items: center; gap: 7px; margin-bottom: 10px; flex-wrap: wrap; }
+  .modal-title { font-size: 19px; font-weight: 800; letter-spacing: -0.02em; color: var(--text); margin-bottom: 4px; padding-right: 60px; }
+  .modal-signal { font-size: 12px; color: var(--text3); margin-bottom: 20px; font-style: italic; font-family: var(--mono); }
+  .modal-signal strong { color: var(--text2); font-style: normal; }
+  .modal-steps { display: flex; flex-direction: column; gap: 14px; }
+  .modal-step { background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 16px 18px; }
+  .modal-step-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .modal-step-num { width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; flex-shrink: 0; background: var(--surface3); border: 1px solid var(--border2); color: var(--text2); font-family: var(--mono); }
+  .modal-step-label { font-size: 9px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text3); font-family: var(--mono); }
+  .modal-step-title { font-size: 13px; font-weight: 700; color: var(--text); margin-top: 1px; }
+  .modal-say { background: var(--surface3); border: 1px solid var(--border); border-left: 3px solid var(--teal); border-radius: 0 var(--radius) var(--radius) 0; padding: 11px 15px; font-size: 14px; font-style: italic; line-height: 1.75; color: var(--text); margin: 7px 0; }
+  .modal-note { font-size: 12.5px; color: var(--text2); line-height: 1.65; margin-top: 7px; padding: 9px 13px; background: var(--purple-dim); border: 1px solid var(--purple-border); border-radius: var(--radius); }
+  .modal-note-label { font-size: 9px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--purple); display: block; margin-bottom: 3px; font-family: var(--mono); }
+  .mt-say { background: var(--teal-dim); color: var(--teal); border: 1px solid var(--teal-border); }
+
+  /* ── Scrollbar ── */
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+
+  @media (max-width: 700px) {
+    .page-header { padding: 18px 18px 14px; }
+    .main { padding: 22px 18px 60px; }
+    .dg-bar { grid-template-columns: repeat(2,1fr); }
+    .header-top { flex-direction: column; }
+    .fw-pills { justify-content: flex-start; }
+    .step-body { padding-left: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="header-top">
+    <div>
+      <div class="header-eyebrow">Daniel G · 4 Steps to Close</div>
+      <h1>Marketing Services Cold Call Script</h1>
+      <div class="header-sub">Open → Qualify → Present → Close · Meta Ads · Web Design · Social Media · Full Pivot Scripts</div>
+    </div>
+    <div class="fw-pills">
+      <div class="fw-pill" style="border-color:var(--gold-border);color:var(--gold)"><div class="fw-pill-n" style="background:var(--gold-dim)">1</div>Open</div>
+      <div class="fw-pill" style="border-color:var(--blue-border);color:var(--blue)"><div class="fw-pill-n" style="background:var(--blue-dim)">2</div>Qualify</div>
+      <div class="fw-pill" style="border-color:var(--green-border);color:var(--green)"><div class="fw-pill-n" style="background:var(--green-dim)">3</div>Present</div>
+      <div class="fw-pill" style="border-color:var(--orange-border);color:var(--orange)"><div class="fw-pill-n" style="background:var(--orange-dim)">4</div>Close</div>
+    </div>
+  </div>
+  <div class="nav-tabs">
+    <button class="nav-tab t-meta active" onclick="showPanel('meta',this)">Meta Ads</button>
+    <button class="nav-tab t-web"         onclick="showPanel('web',this)">Web Design</button>
+    <button class="nav-tab t-social"      onclick="showPanel('social',this)">Social Media</button>
+    <button class="nav-tab t-pivot"       onclick="showPanel('pivot',this)">Pivot Scripts</button>
+    <button class="nav-tab t-obj"         onclick="showPanel('obj',this)">Objections</button>
+  </div>
+</div>
+
+<div class="main">
+
+<!-- ═══════════════════════════ META ADS ═══════════════════════════ -->
+<div class="panel active" id="panel-meta">
+
+  <div class="dg-bar">
+    <div class="dg-card dg-1"><div class="dg-card-step"><div class="dg-dot"></div>Step 1</div><div class="dg-card-title">Open</div><div class="dg-card-sub">"Did I catch you at a bad time?" → hook → permission</div></div>
+    <div class="dg-card dg-2"><div class="dg-card-step"><div class="dg-dot"></div>Step 2</div><div class="dg-card-title">Qualify</div><div class="dg-card-sub">Four W. One at a time. Silence after each. Don't skip W4.</div></div>
+    <div class="dg-card dg-3"><div class="dg-card-step"><div class="dg-dot"></div>Step 3</div><div class="dg-card-title">Present</div><div class="dg-card-sub">Mirror their W4. Problem first. Outcome. Under 60 sec.</div></div>
+    <div class="dg-card dg-4"><div class="dg-card-step"><div class="dg-dot"></div>Step 4</div><div class="dg-card-title">Close</div><div class="dg-card-sub">"Would you be against…" → stack → pullback if needed.</div></div>
+  </div>
+
+  <div class="script-header">
+    <div class="script-badge badge-meta">● Meta Ads</div>
+    <h2>Meta Advertisements Script</h2>
+    <p>Full Daniel G sequence — every branch covered. Read every step before your first call.</p>
+  </div>
+
+  <div class="steps">
+
+    <!-- S1: OPEN -->
+    <div class="step open" data-dg="1">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num num-meta">1</div>
+        <div class="step-meta-wrap">
+          <div class="step-phase">Step 1 — Open · First 10 seconds</div>
+          <div class="step-title">Pattern interrupt — position yourself, earn the conversation</div>
+        </div>
+        <svg class="step-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="step-body">
+        <span class="label-tag tag-say">Always open with this — word for word</span>
+        <div class="quote-block">"Hey [Name] — did I catch you at a bad time?"</div>
+        <div class="note-block dg"><span class="nt">Daniel G — Why this line works</span>Every other salesperson opens with a pitch. You open with respect for their time. When they say "no, go ahead" they've given you permission to speak — and permission changes the dynamic completely. You're no longer an intruder. You're a guest.</div>
+
+        <p class="body-text" style="margin-top:16px">✅ <strong>When they say "no, go ahead" / "what's this about":</strong></p>
+        <div class="quote-block">"I run Meta ad campaigns specifically for [type of business — e.g. local gyms, roofing companies, dental clinics] and I came across [Business Name]. I noticed you're either not running ads right now or your current setup isn't structured to convert — and for a business like yours, that's leads walking past you every single day. I've got one quick question for you. Is that a fair 60 seconds?"</div>
+        <div class="note-block tip"><span class="nt">Coaching tip — "I noticed"</span>"I noticed something" is a curiosity gap. They want to know what you saw. It also proves you actually looked at their business — instant credibility over every other cold caller who clearly didn't. Don't explain the full solution yet. You're just earning the right to ask questions.</div>
+
+        <div class="section-divider"></div>
+
+        <p class="body-text">🚫 <strong>If they say "yes, bad time" or "I'm busy":</strong></p>
+        <div class="quote-block alt">"Totally fine — when would be a better time to give you a call back? I'll be quick, I promise it'll be worth 60 seconds."</div>
+        <div class="note-block tip"><span class="nt">Coaching tip</span>Don't push when they say bad time. Lock in a callback immediately — don't just say "I'll try again later." Get a specific day. "Is tomorrow morning better, or afternoon?" The moment you have a time, you've converted the call into a warm follow-up.</div>
+
+        <div class="section-divider"></div>
+
+        <p class="body-text">🚫 <strong>If they don't run any ads at all — don't treat it as a dead end:</strong></p>
+        <div class="quote-block alt">"That actually makes this call more interesting — because most businesses in [industry] are getting undercut by competitors who are running ads right now, and they don't even know it. Your competitors are showing up in front of people who are searching for exactly what you do — and you're not there. You've got a first-mover window here. Do you have 90 seconds?"</div>
+        <div class="note-block dg"><span class="nt">Mindset shift</span>"We don't run ads" is the best possible opening. It means zero competition from themselves — they haven't wasted money on bad ads and they're not comparing you to a previous provider. Reframe their blank slate as an advantage, not a problem.</div>
+
+        <div class="section-divider"></div>
+
+        <p class="body-text">↪ <strong>If it's the wrong person (not the decision-maker):</strong></p>
+        <div class="quote-block info">"No worries at all — who's the right person to speak to about marketing decisions? I just want to make sure I'm not wasting anyone's time, including yours."</div>
+        <div class="note-block"><span class="nt">Psychology</span>"I don't want to waste your time" lowers the guard and makes them far more likely to give you the real name instead of brushing you off. Never pitch to the gatekeeper — you'll get a soft no passed on as a hard one.</div>
+
+        <div class="section-divider"></div>
+
+        <p class="body-text">↪ <strong>If they run ads but with someone else already:</strong></p>
+        <div class="quote-block info">"That's great — are you happy with what you're getting from them right now? I ask because a lot of businesses I speak to are running ads and spending money but can't actually tell what's working. Is that the case or are yours converting well?"</div>
+        <div class="note-block"><span class="nt">Coaching tip</span>Don't retreat the second you hear "we have an agency." Ask one honest question. If they pause before saying "yeah it's great" — that hesitation is your opening. If they genuinely are happy, respect it and move on. Don't waste either person's time.</div>
+      </div>
+    </div>
+
+    <!-- S2: QUALIFY -->
+    <div class="step" data-dg="2">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num num-meta">2</div>
+        <div class="step-meta-wrap">
+          <div class="step-phase">Step 2 — Qualify · Four W Questions</div>
+          <div class="step-title">What, Where, Why, What if — make them say the problem out loud</div>
+        </div>
+        <svg class="step-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="step-body">
+        <span class="label-tag tag-dg">Daniel G · Four W Framework</span>
+        <p class="body-text">Ask <strong>one question at a time</strong>. Wait for the full answer. Do not rush. Do not move to W2 while they're still answering W1. Silence is your friend — let it breathe.</p>
+
+        <div class="w-grid">
+          <div class="w-item">
+            <div class="w-badge w1">W1 — What</div>
+            <div class="w-text">"What does your current marketing actually look like — are you running any paid ads at all right now, or is it mostly organic?"</div>
+          </div>
+          <div class="w-item">
+            <div class="w-badge w2">W2 — Where</div>
+            <div class="w-text">"Where are your leads coming from right now — if I asked you what's actually driving the most new business, what would you say?"</div>
+          </div>
+          <div class="w-item">
+            <div class="w-badge w3">W3 — Why</div>
+            <div class="w-text">"Why do you think paid ads haven't been a consistent part of the plan so far — is it the budget, not knowing if they'd work, or just not having had the time to set it up properly?"</div>
+          </div>
+          <div class="w-item" style="border-color:var(--gold-border)">
+            <div class="w-badge w4">W4 — What if</div>
+            <div class="w-text">"What if you had a proper system bringing in 10 to 20 qualified leads a month from Meta — not random clicks, but people who are actually looking for what you do — what would that change for the business?"</div>
+          </div>
+        </div>
+
+        <div class="note-block dg"><span class="nt">W4 — The close setup. This is the most important question you'll ask.</span>Let them answer in full. Write down their exact words. Whatever they say — "we'd be able to hire someone", "we could finally scale", "I'd stop stressing about where the next client is coming from" — that is your close. You will mirror it back in Step 4 word for word. Do not move on until they've answered W4.</div>
+
+        <div class="section-divider"></div>
+        <p class="body-text">⚡ <strong>What if they give very short answers and don't open up?</strong></p>
+        <div class="quote-block alt">"Got it — and just so I understand it better, can you give me a bit more on that? Like on a typical month, roughly how many new enquiries are you getting?"</div>
+        <div class="note-block tip"><span class="nt">Coaching tip</span>Short answers usually mean they're cautious, not uninterested. Ask a follow-up that requires a specific number or example. Numbers make people think concretely — and once they're thinking concretely, they open up.</div>
+
+        <div class="section-divider"></div>
+
+        <p class="body-text">⚡ <strong>Bridge straight from W4 into Step 3 — do not go back to a qualifying frame:</strong></p>
+        <div class="quote-block info">"Okay — so based on what you just told me, here's exactly what I'd do for [Business Name] specifically..."</div>
+        <div class="note-block"><span class="nt">Psychology</span>After W4, they've emotionally bought in. Pump the brakes with another "let me tell you about my process" line and you'll kill the momentum. Use their exact W4 words to open your present. Mirror, don't introduce.</div>
+      </div>
+    </div>
+
+    <!-- S3: PRESENT -->
+    <div class="step" data-dg="3">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num num-meta">3</div>
+        <div class="step-meta-wrap">
+          <div class="step-phase">Step 3 — Present · Problem-First</div>
+          <div class="step-title">Name their problem, bridge to the outcome — under 60 seconds, no feature lists</div>
+        </div>
+        <svg class="step-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="step-body">
+        <p class="body-text"><strong>Lead with their problem, not your service. Problem → bridge → outcome. That's the entire structure.</strong></p>
+        <div class="quote-block">"Based on what you told me — you're relying on referrals and word of mouth, which works until it doesn't. The problem is you have no control over it. Some months are great, some months are dry, and there's nothing you can do to change it. That's the exact gap I close. I build Meta campaigns specifically for [type of business] — right audience, right creative, right offer — so you go from hoping leads show up to having a system that brings them in consistently. The businesses I work with typically see their first real results within 30 to 60 days and within 90 days they know their exact cost per lead. It stops being a gamble."</div>
+        <div class="note-block dg"><span class="nt">Daniel G — present principle</span>No feature dumps. No "I offer A/B testing, pixel setup, retargeting…" One problem. One bridge. One outcome. The moment you list features you sound like every other marketer. The moment you name their specific situation back to them, you sound like the only person who actually understands it.</div>
+
+        <div class="section-divider"></div>
+
+        <p class="body-text">🚫 <strong>If they've tried ads before and they didn't work — adjust the present:</strong></p>
+        <div class="quote-block alt">"Based on what you described — you've tried ads before and they bled money. That tells me one of three things went wrong: the targeting was too broad, the creative wasn't stopping the scroll, or the offer wasn't compelling enough for cold traffic. Any one of those will sink a campaign. What I do differently is build a proper structure from day one — test small, find what converts, then scale only what's proven. The businesses I work with who've been burned before are usually the most motivated to do it right."</div>
+
+        <div class="section-divider"></div>
+
+        <p class="body-text">🚫 <strong>If they don't have a landing page / website to send traffic to — don't ignore it:</strong></p>
+        <div class="quote-block alt">"Before I go further — one thing that's going to affect the results is where we send the traffic. Running ads without a proper landing page is like running a TV commercial with no phone number. Do you have a website right now, or are people going to a Facebook page?"</div>
+        <div class="note-block warn"><span class="nt">Pivot trigger</span>If they say they don't have a website or it's very basic — this is your signal to consider pivoting to web design first. See the Pivot Scripts tab for the Meta → Web Design full script.</div>
+      </div>
+    </div>
+
+    <!-- S4: CLOSE -->
+    <div class="step" data-dg="4">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num num-orange">4</div>
+        <div class="step-meta-wrap">
+          <div class="step-phase">Step 4 — Close · Daniel G Method</div>
+          <div class="step-title">"Would you be against…" — stack the value, then the pullback</div>
+        </div>
+        <svg class="step-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="step-body">
+        <span class="label-tag tag-dg">Primary close — use this first</span>
+        <div class="quote-block close">"Would you be against jumping on a 20-minute call this week where I walk you through exactly what I'd build for [Business Name] — the targeting, the offer structure, what the first 30 days looks like — so you can see whether it makes sense before committing to anything?"</div>
+        <div class="note-block dg"><span class="nt">Why "would you be against" works</span>It's a double negative. There's no bad answer for you. If they say yes — they agree. If they say no — they're open. It also reframes the call as you giving them information, not selling. You're removing pressure at the exact moment most salespeople add it.</div>
+
+        <div class="or-divider"><span>if they say yes to the call</span></div>
+        <div class="quote-block close">"Perfect — what's better for you, Thursday or Friday? I'll keep it to 20 minutes, I'll have some specifics pulled together for your business beforehand."</div>
+        <div class="note-block tip"><span class="nt">Coaching tip — the assumptive calendar close</span>Don't ask "does that sound good?" — ask which day. Giving two options removes the binary yes/no entirely. They're now choosing between Thursday and Friday, not between yes and no.</div>
+
+        <div class="or-divider"><span>if they're already warm — close direct on the proposal</span></div>
+        <div class="quote-block close">"Based on everything you've told me — the reliance on referrals, the inconsistency, and what you said a proper pipeline would mean for you — I've got a clear picture of what I'd do. Would you be against me putting a proposal together today so you can have it in your inbox by tomorrow morning — scope, timeline, investment — and we go from there?"</div>
+
+        <div class="or-divider"><span>if they hesitate — the pullback</span></div>
+        <div class="quote-block alt">"Completely fine — no pressure at all. Genuinely. You're free to take as much time as you need. I only work with a handful of businesses at a time and I'd rather the fit be right than rush someone into something they're not fully sure about. If the timing isn't right, would it make more sense to circle back in a few weeks?"</div>
+        <div class="note-block"><span class="nt">Psychology — the pullback</span>The moment you release pressure, the hesitation often collapses. "I'd rather wait for the right fit" signals you don't need them — which paradoxically makes them want to move. Nine times out of ten they re-engage rather than defer. If they defer — get a specific date, add it to your calendar, and follow up exactly then.</div>
+
+        <div class="or-divider"><span>if they ask about price before the call</span></div>
+        <div class="quote-block alt">"I don't quote on a cold call — because until I understand your specific situation properly, any number I give you would be made up. What I can tell you is I work with businesses of all sizes and I structure it around what makes sense for the return. That's what the 20-minute call is for. Fair?"</div>
+      </div>
+    </div>
+
+    <!-- GAME PLAN -->
+    <div class="step" data-dg="4">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num num-orange" style="font-size:11px">GP</div>
+        <div class="step-meta-wrap">
+          <div class="step-phase">Game Plan · 30-Day Breakdown — use if they need more before committing to a call</div>
+          <div class="step-title">Give just enough structure to make the call feel worth it — then stop</div>
+        </div>
+        <svg class="step-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="step-body">
+        <div class="quote-block close">"Let me give you a quick picture of what the first 30 days actually looks like. Week one and two — we set the foundation. That means the pixel, proper audience targeting, offer positioning, and creative brief. Everything that's normally skipped or broken gets sorted before a single pound or dollar goes live. Week three and four — we go live with a controlled test. We monitor what's converting, make real-time adjustments, and by day 30 you know exactly what your cost per lead is. No more guessing. That's the walkthrough call in 20 minutes — would Thursday or Friday work better for you?"</div>
+        <div class="note-block warn"><span class="nt">Critical rule</span>Do NOT over-explain the plan on this call. The goal is to get them to the 20-minute walkthrough — not to do the entire strategy session right now. Give enough that they can see it's real and structured. Then stop and let the close land. If you keep talking, you talk yourself out of the booking.</div>
+      </div>
+    </div>
+
+    <!-- PIVOT TRIGGERS -->
+    <div class="step" data-dg="pivot">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num num-teal">↪</div>
+        <div class="step-meta-wrap">
+          <div class="step-phase">Pivot Triggers — when to switch services mid-call</div>
+          <div class="step-title">Listen for these signals — they tell you what to sell instead</div>
+        </div>
+        <svg class="step-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="step-body">
+        <div class="pivot-list">
+          <div class="pivot-item" onclick="openModal('meta-to-web')">
+            <div class="pivot-to">→ Pivot to Web Design</div>
+            <div class="pivot-signal">Signal: "We don't have a website" / "We just send people to our Facebook page" / "Our site is really basic"</div>
+            <div class="pivot-text">"That actually changes things — the ad is only half the job. If the traffic has nowhere to convert, the ads will bleed money. Where are you sending people right now when they click?"</div>
+          </div>
+          <div class="pivot-item" onclick="openModal('meta-to-social')">
+            <div class="pivot-to">→ Pivot to Social Media</div>
+            <div class="pivot-signal">Signal: "Our page looks empty" / "We barely post" / "We don't have much content up"</div>
+            <div class="pivot-text">"That's actually one of the first things people do before they click an ad — they check your page. If it looks dead, the ad spend is wasted. Tell me about your content situation..."</div>
+          </div>
+        </div>
+        <p class="body-text" style="margin-top:12px">👉 See the <strong>Pivot Scripts tab</strong> for the full word-for-word scripts for each of these switches.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════ WEB DESIGN ═══════════════════════════ -->
+<div class="panel" id="panel-web">
+
+  <div class="dg-bar">
+    <div class="dg-card dg-1"><div class="dg-card-step"><div class="dg-dot"></div>Step 1</div><div class="dg-card-title">Open</div><div class="dg-card-sub">Reference their site specifically. Name the leak.</div></div>
+    <div class="dg-card dg-2"><div class="dg-card-step"><div class="dg-dot"></div>Step 2</div><div class="dg-card-title">Qualify</div><div class="dg-card-sub">Traffic vs conversion problem? W4 = the ROI question.</div></div>
+    <div class="dg-card dg-3"><div class="dg-card-step"><div class="dg-dot"></div>Step 3</div><div class="dg-card-title">Present</div><div class="dg-card-sub">Name which problem it is. Fix the leak before the tap.</div></div>
+    <div class="dg-card dg-4"><div class="dg-card-step"><div class="dg-dot"></div>Step 4</div><div class="dg-card-title">Close</div><div class="dg-card-sub">"Would you be against a mockup call?" → stack → pullback.</div></div>
+  </div>
+
+  <div class="script-header">
+    <div class="script-badge badge-web">● Web Design</div>
+    <h2>Web Design Script</h2>
+    <p>Specific-problem open → conversion-focused Four W → present → close</p>
+  </div>
+
+  <div class="steps">
+
+    <div class="step open" data-dg="1">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num num-web">1</div>
+        <div class="step-meta-wrap">
+          <div class="step-phase">Step 1 — Open · Lead with what you saw</div>
+          <div class="step-title">You looked at their site before calling — make that obvious</div>
+        </div>
+        <svg class="step-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="step-body">
+        <span class="label-tag tag-say">Always start with this</span>
+        <div class="quote-block">"Hey [Name] — did I catch you at a bad time?"</div>
+        <p class="body-text">Once they say go ahead:</p>
+        <div class="quote-block">"I just came across [Business Name]'s website and I genuinely think it's losing you customers before they ever get a chance to call you. I build conversion-focused websites for [type of business] and I could see three specific things straight away that are costing you enquiries. Are you the right person to speak to about that?"</div>
+        <div class="note-block dg"><span class="nt">Daniel G — why specificity wins the open</span>"I could see three specific things" is a curiosity gap. They want to know what the three things are. They don't know whether to be defensive or curious — and that gap buys you 60 seconds. You've also proven you actually looked, which puts you above every other cold caller automatically.</div>
+
+        <div class="section-divider"></div>
+        <p class="body-text">⚡ <strong>If they immediately ask "what three things?":</strong></p>
+        <div class="quote-block alt">"I'll walk you through all of them — I just want to ask you a couple of quick questions first so I understand what you're actually trying to get the site to do for you. That way I'm not just pointing out problems without knowing what matters most to your business. Is that fair?"</div>
+        <div class="note-block tip"><span class="nt">Coaching tip</span>Don't give the three things away before you qualify. If you do, you become a free consultant. Gate the detail behind the Four W — it also positions your diagnosis as more valuable because they had to wait for it.</div>
+
+        <div class="section-divider"></div>
+        <p class="body-text">🚫 <strong>If they say they're happy with the site / just had it rebuilt:</strong></p>
+        <div class="quote-block alt">"That's great — when you say you're happy with it, is that from a design standpoint or is it actually bringing in enquiries? Because those are two different things. A site can look great and still not convert. Which way is it for you right now?"</div>
+        <div class="note-block"><span class="nt">Coaching tip</span>This question forces them to separate aesthetics from performance. Almost every business owner is proud of how their site looks but unsure whether it's working. That uncertainty is your opening.</div>
+
+        <div class="section-divider"></div>
+        <p class="body-text">🚫 <strong>If they don't have a website at all:</strong></p>
+        <div class="quote-block alt">"That's actually the most important thing to fix first — before you spend a penny on ads, social, or anything else. Right now every time someone Googles you or hears about you from someone else, they have nowhere to go to get confident enough to call. You're losing business every single week without knowing it. Are you the right person to make that decision?"</div>
+      </div>
+    </div>
+
+    <div class="step" data-dg="2">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num num-web">2</div>
+        <div class="step-meta-wrap">
+          <div class="step-phase">Step 2 — Qualify · Four W Questions</div>
+          <div class="step-title">Traffic problem or conversion problem — you need to know which one before you present</div>
+        </div>
+        <svg class="step-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="step-body">
+        <span class="label-tag tag-dg">Daniel G · Four W Framework</span>
+        <div class="w-grid">
+          <div class="w-item">
+            <div class="w-badge w1">W1 — What</div>
+            <div class="w-text">"What is the site actually doing for you right now — are you getting enquiries from it, or is it more just sitting there as a digital business card?"</div>
+          </div>
+          <div class="w-item">
+            <div class="w-badge w2">W2 — Where</div>
+            <div class="w-text">"Where is most of your new business coming from — is anyone actually finding you online or is it mostly referrals and word of mouth?"</div>
+          </div>
+          <div class="w-item">
+            <div class="w-badge w3">W3 — Why</div>
+            <div class="w-text">"Why do you think the site isn't converting — is it the design, the copy, people aren't finding it in the first place, or a bit of all three?"</div>
+          </div>
+          <div class="w-item" style="border-color:var(--gold-border)">
+            <div class="w-badge w4">W4 — What if</div>
+            <div class="w-text">"What if your website was your best salesperson — working 24 hours a day, turning visitors into calls and bookings automatically — what would that be worth to the business every month?"</div>
+          </div>
+        </div>
+        <div class="note-block dg"><span class="nt">The W4 ROI anchor — critical</span>They just put a number in their head before you've quoted anything. When they later object to price, they're arguing against their own math — not yours. That is a completely different and winnable conversation. Write down exactly what they say for W4.</div>
+
+        <div class="section-divider"></div>
+        <p class="body-text">⚡ <strong>Key diagnostic — listen to W1 and W2 together:</strong></p>
+        <p class="body-text">If W1 = "no enquiries" and W2 = "we get traffic from Instagram / Google" → <strong>conversion problem</strong> — the site is the leak. Present around fixing the conversion layer.<br><br>If W1 = "no enquiries" and W2 = "mostly word of mouth, no online traffic" → <strong>traffic + conversion problem</strong> — fix the site first, then suggest ads. (See Pivot Scripts for the Web → Meta Ads pivot.)</p>
+      </div>
+    </div>
+
+    <div class="step" data-dg="3">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num num-web">3</div>
+        <div class="step-meta-wrap">
+          <div class="step-phase">Step 3 — Present · Name the right problem</div>
+          <div class="step-title">Fix the leak before you fix the tap — two versions based on their answers</div>
+        </div>
+        <svg class="step-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="step-body">
+        <span class="label-tag tag-say">Bridge from W4 — always open with this</span>
+        <div class="quote-block info">"So you said [mirror their W4 answer]. That's the gap I fix. Here's specifically what I'd do..."</div>
+
+        <div class="section-divider"></div>
+
+        <span class="label-tag tag-say">Version A — they have traffic but no conversions</span>
+        <div class="quote-block">"You've already solved the hardest part — people are finding you. The site is just losing them the moment they land. What I build is designed around one thing: getting visitors to take action. Clear messaging, one primary call to action, trust signals that remove hesitation, fast load time. The businesses I've worked with have gone from 'site does nothing' to it being their number one lead source within 60 to 90 days. The site stops being a cost you maintain and becomes a revenue channel."</div>
+
+        <div class="section-divider"></div>
+
+        <span class="label-tag tag-say">Version B — they have no traffic either (double problem)</span>
+        <div class="quote-block alt">"So there are two things happening — the site isn't converting, and you don't have consistent traffic. The order matters here. There's no point putting money into driving traffic to a site that won't convert it. You'd be filling a bucket with a hole in it. Fix the conversion layer first — then the traffic you drive actually turns into leads. I sort the foundation so any traffic you bring in, whether organic or paid, actually does something."</div>
+        <div class="note-block tip"><span class="nt">Coaching tip — the "foundation first" frame</span>Telling someone to fix the site before spending on ads positions you as an advisor, not a salesperson. You're protecting their money. That trust is worth more than the sale of ads today — and it usually leads to a bigger retainer later.</div>
+      </div>
+    </div>
+
+    <div class="step" data-dg="4">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num num-orange">4</div>
+        <div class="step-meta-wrap">
+          <div class="step-phase">Step 4 — Close · Daniel G Method</div>
+          <div class="step-title">"Would you be against a mockup call" — site as investment, not cost</div>
+        </div>
+        <svg class="step-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="step-body">
+        <span class="label-tag tag-dg">Primary close</span>
+        <div class="quote-block close">"Would you be against jumping on a 20-minute call this week where I pull together a rough direction for your site and walk you through exactly what I'd change — so you can actually see what I'd build before making any decision?"</div>
+        <div class="note-block dg"><span class="nt">Why this works</span>You're doing work before they commit. That give-before-you-get removes the risk in their mind entirely. A mockup call also lets you walk them through the ROI conversation with their own W4 numbers in front of you both — which makes the close on the proposal call almost effortless.</div>
+
+        <div class="or-divider"><span>if they're already warm — close on the proposal</span></div>
+        <div class="quote-block close">"Based on what you've told me — people are finding you and the site isn't converting any of them. That's a clean fix. Would you be against letting me put a proposal together this week — scope, timeline, investment — so you can look it over and we get the site working for you before the end of the month?"</div>
+
+        <div class="or-divider"><span>if they hesitate — the pullback</span></div>
+        <div class="quote-block alt">"Completely understand — no pressure. The only thing worth saying is the site is losing leads every single day it stays the way it is. But genuinely — if the timing isn't right, I'd rather wait and do it properly. When would be a better time to pick this back up?"</div>
+
+        <div class="or-divider"><span>if they ask about price</span></div>
+        <div class="quote-block alt">"I don't give numbers before I understand the full scope — because any figure I give you now would either undersell what you need or spook you with something that's not relevant. What I'd say is: you told me a site that converted would be worth [their W4 answer] a month. The investment is always a fraction of that. That's what the mockup call is for — I'll show you exactly what I'd do and the investment attached to it. Fair?"</div>
+      </div>
+    </div>
+
+    <div class="step" data-dg="pivot">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num num-teal">↪</div>
+        <div class="step-meta-wrap">
+          <div class="step-phase">Pivot Triggers — when to switch services mid-call</div>
+          <div class="step-title">Listen for these signals during the Four W questions</div>
+        </div>
+        <svg class="step-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="step-body">
+        <div class="pivot-list">
+          <div class="pivot-item" onclick="openModal('web-to-meta')">
+            <div class="pivot-to">→ Pivot to Meta Ads</div>
+            <div class="pivot-signal">Signal: "The site is fine — we just don't get any traffic" / "We converted 3 enquiries last month but I know more people visit"</div>
+            <div class="pivot-text">"That's the gap right there. A site that converts with no traffic is like a store with no customers — the store is ready, you just need footfall. Are you running any paid ads to drive people there?"</div>
+          </div>
+          <div class="pivot-item" onclick="openModal('web-to-social')">
+            <div class="pivot-to">→ Pivot to Social Media</div>
+            <div class="pivot-signal">Signal: "We get traffic from Instagram but nothing converts on the site" / "People say they found us on social but then nothing"</div>
+            <div class="pivot-text">"The social-to-site handoff is everything. When someone clicks through from Instagram, the experience has to feel like a continuation of what they just saw — not a completely different brand. What does your content strategy on Instagram actually look like?"</div>
+          </div>
+        </div>
+        <p class="body-text" style="margin-top:12px">👉 See the <strong>Pivot Scripts tab</strong> for the full word-for-word scripts for each switch.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════ SOCIAL MEDIA ═══════════════════════════ -->
+<div class="panel" id="panel-social">
+
+  <div class="dg-bar">
+    <div class="dg-card dg-1"><div class="dg-card-step"><div class="dg-dot"></div>Step 1</div><div class="dg-card-title">Open</div><div class="dg-card-sub">Reference the page. Name the silence. Earn 90 seconds.</div></div>
+    <div class="dg-card dg-2"><div class="dg-card-step"><div class="dg-dot"></div>Step 2</div><div class="dg-card-title">Qualify</div><div class="dg-card-sub">W3 = the real block. W4 = leads not likes vision.</div></div>
+    <div class="dg-card dg-3"><div class="dg-card-step"><div class="dg-dot"></div>Step 3</div><div class="dg-card-title">Present</div><div class="dg-card-sub">Pipeline tool, not a branding exercise. Off their plate.</div></div>
+    <div class="dg-card dg-4"><div class="dg-card-step"><div class="dg-dot"></div>Step 4</div><div class="dg-card-title">Close</div><div class="dg-card-sub">"Would you be against a sample strategy call?" + pullback.</div></div>
+  </div>
+
+  <div class="script-header">
+    <div class="script-badge badge-social">● Social Media</div>
+    <h2>Social Media Management Script</h2>
+    <p>Page-specific open → W3 finds the real block → leads-not-likes present → close</p>
+  </div>
+
+  <div class="steps">
+
+    <div class="step open" data-dg="1">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num num-social">1</div>
+        <div class="step-meta-wrap">
+          <div class="step-phase">Step 1 — Open · Reference their actual page</div>
+          <div class="step-title">Specificity kills the guard — name exactly what you saw</div>
+        </div>
+        <svg class="step-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="step-body">
+        <span class="label-tag tag-say">Always open with this</span>
+        <div class="quote-block">"Hey [Name] — did I catch you at a bad time?"</div>
+        <p class="body-text">Once they say go ahead:</p>
+        <div class="quote-block">"I was just on [Business Name]'s [Instagram / Facebook] page and I noticed the last post was [X days / weeks / months] ago. I manage social media for [type of business] and I'll be direct with you — that silence on the page is actively costing you customers right now. People check social before they decide to call. When it's quiet, they move on. Are you the right person to speak to about that?"</div>
+        <div class="note-block dg"><span class="nt">Daniel G — Specificity + loss aversion</span>"I noticed the last post was [specific timeframe] ago" proves you looked. "Actively costing you customers" hits loss aversion — the strongest psychological motivator there is. You're not pitching a service. You're warning them about a problem they didn't know was costing them money today.</div>
+
+        <div class="section-divider"></div>
+        <p class="body-text">✅ <strong>If they post regularly but engagement is dead:</strong></p>
+        <div class="quote-block alt">"I can see you're posting consistently — which is great. The issue is the content isn't converting the attention into enquiries. That's a strategy problem, not a consistency problem. You're doing the hard work and not getting the return from it."</div>
+
+        <div class="section-divider"></div>
+        <p class="body-text">🚫 <strong>If they barely have a presence / page is nearly empty:</strong></p>
+        <div class="quote-block alt">"The page is pretty quiet right now — and in [industry], that's a real opportunity because most of your competitors aren't doing this properly either. The businesses that show up consistently are the ones people trust before they've even spoken to them. You don't need to be everywhere — you need to be consistent in one or two places. Do you have 90 seconds?"</div>
+
+        <div class="section-divider"></div>
+        <p class="body-text">🚫 <strong>If they say "we do our own social":</strong></p>
+        <div class="quote-block alt">"That's great — is it bringing in actual enquiries, or is it more just for brand presence? I ask because there's a big difference between posting and having a strategy that actually moves people to reach out. Which way is it for you?"</div>
+        <div class="note-block tip"><span class="nt">Coaching tip</span>Most business owners who "do their own social" are posting reactively with no strategy. They already know it's not working. This question gives them permission to admit it.</div>
+      </div>
+    </div>
+
+    <div class="step" data-dg="2">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num num-social">2</div>
+        <div class="step-meta-wrap">
+          <div class="step-phase">Step 2 — Qualify · Four W Questions</div>
+          <div class="step-title">W3 is the key question — it tells you the real reason it's not happening</div>
+        </div>
+        <svg class="step-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="step-body">
+        <span class="label-tag tag-dg">Daniel G · Four W Framework</span>
+        <div class="w-grid">
+          <div class="w-item">
+            <div class="w-badge w1">W1 — What</div>
+            <div class="w-text">"What does your social actually look like right now — are you posting consistently or is it more when you get a chance to?"</div>
+          </div>
+          <div class="w-item">
+            <div class="w-badge w2">W2 — Where</div>
+            <div class="w-text">"Where are your customers coming from right now — is social any part of that, or is it mostly referrals and word of mouth?"</div>
+          </div>
+          <div class="w-item">
+            <div class="w-badge w3">W3 — Why</div>
+            <div class="w-text">"Why has it been hard to stay consistent with it — is it the time it takes, not really knowing what to post, or it just keeps getting pushed down the list?"</div>
+          </div>
+          <div class="w-item" style="border-color:var(--gold-border)">
+            <div class="w-badge w4">W4 — What if</div>
+            <div class="w-text">"What if your social was consistently generating enquiries every week — DMs turning into bookings, posts building trust before people even reach out — what would that change for the business?"</div>
+          </div>
+        </div>
+        <div class="note-block"><span class="nt">Psychology — W3 removes shame</span>W3 gives them a permission slip. "I've been too busy" is not a failure — it's the exact problem you solve. When they say it, respond warmly: "That's exactly what I hear all the time — and it's exactly why I exist." Don't let them feel judged for it. That warmth builds trust fast.</div>
+        <div class="note-block dg"><span class="nt">W3 also tells you what to sell the promise around</span>If they say "time" → your hook is "completely off your plate." If they say "don't know what to post" → your hook is "full strategy included." If they say "it keeps getting deprioritised" → your hook is "I make it something that runs without you thinking about it." Match your present to the W3 answer.</div>
+      </div>
+    </div>
+
+    <div class="step" data-dg="3">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num num-social">3</div>
+        <div class="step-meta-wrap">
+          <div class="step-phase">Step 3 — Present · Social as Lead Engine</div>
+          <div class="step-title">Leads not likes — position social as a pipeline, not a branding exercise</div>
+        </div>
+        <svg class="step-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="step-body">
+        <span class="label-tag tag-say">Bridge from W4 first</span>
+        <div class="quote-block info">"So you said [mirror their exact W4 words]. That's what I build. Here's what that actually looks like for a business like yours..."</div>
+
+        <div class="section-divider"></div>
+
+        <span class="label-tag tag-say">If W3 = "no time"</span>
+        <div class="quote-block">"From what you told me — you've got something real to show, the business is good, you just don't have the time to show it consistently. That's the only gap. I manage the social end to end — strategy, content creation, captions, scheduling — it's completely off your plate. You never have to think about it. The businesses I work with go from invisible to consistently showing up in front of the right people within the first 30 days. The DMs start coming in and they didn't have to do anything to make it happen."</div>
+
+        <div class="section-divider"></div>
+
+        <span class="label-tag tag-say">If W3 = "don't know what to post"</span>
+        <div class="quote-block alt">"From what you told me — you know the business is good, you just don't know how to translate that into content that makes people want to call. That's a strategy problem and it's exactly what I solve. I build a full content strategy around your business — what to post, why, how often, and in what format — so that every piece of content is doing a job. Moving people from strangers to enquiries. You don't need to know what to post because that's my department."</div>
+
+        <div class="section-divider"></div>
+
+        <span class="label-tag tag-say">If W3 = "it keeps getting deprioritised"</span>
+        <div class="quote-block alt">"From what you told me — you know it matters, it just keeps losing to the hundred other things running the business. That's the most common thing I hear. What I do is take it completely off the decision pile — it runs whether you're thinking about it or not. Within 30 days you've got a presence that's building trust and generating enquiries on its own. You get to focus on actually serving those clients."</div>
+      </div>
+    </div>
+
+    <div class="step" data-dg="4">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num num-orange">4</div>
+        <div class="step-meta-wrap">
+          <div class="step-phase">Step 4 — Close · Daniel G Method</div>
+          <div class="step-title">"Would you be against a sample strategy call" — done-for-you frame</div>
+        </div>
+        <svg class="step-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="step-body">
+        <span class="label-tag tag-dg">Primary close</span>
+        <div class="quote-block close">"Would you be against jumping on a quick call this week where I put together a sample content strategy for [Business Name] — actual post ideas, themes, the platform plan — so you can see exactly what I'd do before you decide anything?"</div>
+        <div class="note-block dg"><span class="nt">Why this works</span>You're doing real work before asking for money. That removes risk entirely. The sample strategy call is your selling environment — you're in front of them, building value live, and by the end of the call the retainer is the logical next step, not a cold ask.</div>
+
+        <div class="or-divider"><span>if they're already warm — close on a start date</span></div>
+        <div class="quote-block close">"Honestly — from everything you've said, the inconsistency, the time it takes, what a proper pipeline from social would mean — this is a clean fix. Would you be against getting started this week so we can get the first month of content live and you can see the difference straight away?"</div>
+
+        <div class="or-divider"><span>if they hesitate — the pullback</span></div>
+        <div class="quote-block alt">"Totally fine — no rush at all. The only thing worth saying is that every week without consistent content is another week your competitors are showing up in front of your customers and you're not. But if the timing isn't right, I'd genuinely rather wait and do it properly. When would be a better time to pick this back up?"</div>
+
+        <div class="or-divider"><span>if they say they want to think about it</span></div>
+        <div class="quote-block alt">"Absolutely — take all the time you need. Before you go — is there one specific thing that's making you hesitate? Because most of the time when someone says they need to think about it there's one real concern underneath it. I'd much rather address that now than have you sitting on something I could clear up in 30 seconds."</div>
+      </div>
+    </div>
+
+    <div class="step" data-dg="pivot">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num num-teal">↪</div>
+        <div class="step-meta-wrap">
+          <div class="step-phase">Pivot Triggers — when to switch services mid-call</div>
+          <div class="step-title">Listen for these during the Four W questions</div>
+        </div>
+        <svg class="step-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="step-body">
+        <div class="pivot-list">
+          <div class="pivot-item" onclick="openModal('social-to-meta')">
+            <div class="pivot-to">→ Pivot to Meta Ads</div>
+            <div class="pivot-signal">Signal: "We run ads but can't tell if they're working" / "We boost posts but nothing comes from it"</div>
+            <div class="pivot-text">"Boosting posts and running proper Meta campaigns are completely different things. Boosting is the most expensive way to get visibility with almost no ROI. A real campaign has a proper objective, audience, creative, and conversion tracking. What you've been running and what I build are two different things."</div>
+          </div>
+          <div class="pivot-item" onclick="openModal('social-to-web')">
+            <div class="pivot-to">→ Pivot to Web Design</div>
+            <div class="pivot-signal">Signal: "We send people to the website but nothing happens" / "People DM us but don't convert when they land on the site"</div>
+            <div class="pivot-text">"Then the site is the leak, not the social. You're doing the hard part — getting people interested. But if the site isn't converting when they land, all that work disappears. You're filling a bucket with a hole in it."</div>
+          </div>
+        </div>
+        <p class="body-text" style="margin-top:12px">👉 See the <strong>Pivot Scripts tab</strong> for the full word-for-word pivot scripts.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════ PIVOT SCRIPTS ═══════════════════════════ -->
+<div class="panel" id="panel-pivot">
+
+  <div class="script-header">
+    <div class="script-badge badge-pivot">● Pivot Scripts</div>
+    <h2>Service Pivot Scripts</h2>
+    <p>Full 4-step Daniel G script for every mid-call service switch. Click any row to open.</p>
+  </div>
+
+  <div class="filter-row">
+    <button class="filter-btn active" onclick="filterPivots('all',this)">All Pivots</button>
+    <button class="filter-btn pf-meta"   onclick="filterPivots('meta',this)">From Meta Ads</button>
+    <button class="filter-btn pf-web"    onclick="filterPivots('web',this)">From Web Design</button>
+    <button class="filter-btn pf-social" onclick="filterPivots('social',this)">From Social Media</button>
+  </div>
+
+  <div class="pivot-table-wrap">
+    <table class="pt">
+      <thead>
+        <tr>
+          <th>From</th><th>→ To</th><th>Signal you hear</th><th>Bridge line</th>
+        </tr>
+      </thead>
+      <tbody id="pivot-tbody">
+        <tr data-from="meta" onclick="openModal('meta-to-web')">
+          <td><span class="from-pill from-meta">Meta Ads</span></td>
+          <td><span class="to-pill to-web">Web Design</span></td>
+          <td><span class="signal-text">"We don't have a website" / "We send traffic to our Facebook page"</span></td>
+          <td><span class="bridge-text">"The ad is only half the job — where are you sending people when they click?"</span><span class="pivot-click-hint">↗ Click for full pivot script</span></td>
+        </tr>
+        <tr data-from="meta" onclick="openModal('meta-to-social')">
+          <td><span class="from-pill from-meta">Meta Ads</span></td>
+          <td><span class="to-pill to-social">Social Media</span></td>
+          <td><span class="signal-text">"Our page looks empty" / "We barely post any content"</span></td>
+          <td><span class="bridge-text">"That's actually the first thing people check before clicking an ad — a dead page kills the conversion."</span><span class="pivot-click-hint">↗ Click for full pivot script</span></td>
+        </tr>
+        <tr data-from="web" onclick="openModal('web-to-meta')">
+          <td><span class="from-pill from-web">Web Design</span></td>
+          <td><span class="to-pill to-meta">Meta Ads</span></td>
+          <td><span class="signal-text">"The site is fine, we just don't get traffic"</span></td>
+          <td><span class="bridge-text">"A converting site with no traffic is a store with no customers — are you running any paid ads?"</span><span class="pivot-click-hint">↗ Click for full pivot script</span></td>
+        </tr>
+        <tr data-from="web" onclick="openModal('web-to-social')">
+          <td><span class="from-pill from-web">Web Design</span></td>
+          <td><span class="to-pill to-social">Social Media</span></td>
+          <td><span class="signal-text">"We get traffic from Instagram but nothing converts"</span></td>
+          <td><span class="bridge-text">"The social-to-site handoff is everything — what does your content strategy actually look like?"</span><span class="pivot-click-hint">↗ Click for full pivot script</span></td>
+        </tr>
+        <tr data-from="social" onclick="openModal('social-to-meta')">
+          <td><span class="from-pill from-social">Social Media</span></td>
+          <td><span class="to-pill to-meta">Meta Ads</span></td>
+          <td><span class="signal-text">"We boost posts" / "We run ads but can't tell if they work"</span></td>
+          <td><span class="bridge-text">"Boosting is not the same as running proper campaigns — they're completely different things."</span><span class="pivot-click-hint">↗ Click for full pivot script</span></td>
+        </tr>
+        <tr data-from="social" onclick="openModal('social-to-web')">
+          <td><span class="from-pill from-social">Social Media</span></td>
+          <td><span class="to-pill to-web">Web Design</span></td>
+          <td><span class="signal-text">"We send people to the website but nothing happens"</span></td>
+          <td><span class="bridge-text">"Then the site is the leak, not the social — you're filling a bucket with a hole in it."</span><span class="pivot-click-hint">↗ Click for full pivot script</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ OBJECTIONS ═══════════════════════════ -->
+<div class="panel" id="panel-obj">
+
+  <div class="script-header">
+    <div class="script-badge badge-obj">● Objections</div>
+    <h2>Objection Handling</h2>
+    <p>Agree → reframe → re-close. Never argue. Never defend. Always redirect.</p>
+  </div>
+
+  <div class="steps">
+
+    <div class="step open" data-dg="obj">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num num-red">$</div>
+        <div class="step-meta-wrap">
+          <div class="step-phase">Price & Budget Objections</div>
+          <div class="step-title">Redirect to ROI — they already did the math in W4</div>
+        </div>
+        <svg class="step-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="step-body">
+        <div class="obj-set">
+          <div class="obj-item">
+            <div class="obj-trigger">Objection: "It's not in the budget right now"</div>
+            <div class="quote-block">"That makes complete sense — and that's exactly why I ask what it would be worth if it worked. You said [their W4 answer]. If this brings in even two or three new clients a month you weren't getting before, how long before it pays for itself? I'm not asking you to spend money — I'm asking whether the return justifies the investment. And you already answered that."</div>
+          </div>
+          <div class="obj-item">
+            <div class="obj-trigger">Objection: "That's too expensive"</div>
+            <div class="quote-block">"Fair enough — what were you thinking? I ask because I'd rather find a way to make this work than walk away from something that could genuinely change your lead flow. The investment is always relative to what it returns. What does a new client actually mean to your business in revenue terms?"</div>
+          </div>
+          <div class="obj-item">
+            <div class="obj-trigger">Objection: "I can't justify that spend right now"</div>
+            <div class="quote-block">"I understand — and I'd never ask you to. The question isn't whether you can afford it right now. The question is whether staying where you are is more expensive than fixing it. Every month without a proper [ads system / converting site / social strategy] is a month of leads going to someone else. What's that worth to you over six months?"</div>
+          </div>
+        </div>
+        <div class="note-block dg"><span class="nt">The W4 anchor — why it matters here</span>If you skipped W4 or they gave a vague answer, price objections are hard to answer. If you got a strong W4 answer, every price objection becomes an ROI conversation using their own numbers. This is why W4 is non-negotiable.</div>
+      </div>
+    </div>
+
+    <div class="step" data-dg="obj">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num num-red">?</div>
+        <div class="step-meta-wrap">
+          <div class="step-phase">Stalling & Think About It</div>
+          <div class="step-title">"Think about it" almost never means what it says — find the real objection</div>
+        </div>
+        <svg class="step-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="step-body">
+        <div class="obj-set">
+          <div class="obj-item">
+            <div class="obj-trigger">Objection: "I need to think about it"</div>
+            <div class="quote-block">"Absolutely — take all the time you need. Before you go though — is there something specific you're not sure about? Because most of the time when someone says they need to think about it there's one real concern underneath it. I'd much rather deal with that now than have you sitting on something I could clear up in 30 seconds."</div>
+          </div>
+          <div class="obj-item">
+            <div class="obj-trigger">Objection: "I need to talk to my partner / business partner"</div>
+            <div class="quote-block">"Of course — that's completely reasonable. What would help is if I knew where you personally stand on it. If your partner said yes today, would you want to move forward? Because if you're not sold yourself, there's no point having that conversation yet."</div>
+          </div>
+          <div class="obj-item">
+            <div class="obj-trigger">Objection: "The timing isn't right"</div>
+            <div class="quote-block">"Understood — when would be right? I ask because the problem doesn't pause in the meantime. Every week without [leads / a converting site / consistent content] is another week the business isn't growing as fast as it could. But I also don't want to push you before you're ready. What would need to change for the timing to be right?"</div>
+          </div>
+        </div>
+        <div class="note-block"><span class="nt">Mindset</span>"Think about it" is almost always code for one of three things: they don't believe it'll work, they don't trust you yet, or there's a hidden budget issue. Your job is to find which one it is — not to accept the stall and hang up.</div>
+      </div>
+    </div>
+
+    <div class="step" data-dg="obj">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num num-red">✕</div>
+        <div class="step-meta-wrap">
+          <div class="step-phase">Trust & Credibility</div>
+          <div class="step-title">Diagnose before you defend — asking "what went wrong" is more powerful than any case study</div>
+        </div>
+        <svg class="step-chevron" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="step-body">
+        <div class="obj-set">
+          <div class="obj-item">
+            <div class="obj-trigger">Objection: "I've tried this before and it didn't work"</div>
+            <div class="quote-block">"That makes complete sense — and honestly that's exactly the situation I hear most. What happened with it? I ask because most of the time when this kind of thing fails it comes down to one of three things: wrong targeting, weak creative, or no proper tracking so no one knew what was working. Which of those was it for you — do you know?"</div>
+          </div>
+          <div class="obj-item">
+            <div class="obj-trigger">Objection: "How do I know this will work for my business?"</div>
+            <div class="quote-block">"That's the right question. And I'd never ask you to take a leap of faith. Here's what I'd say: the strategy call I'm proposing costs you nothing. You get to see exactly what I'd do for your business specifically before committing to anything. If it doesn't make sense after that, you've lost 20 minutes. That's a pretty low-risk way to find out."</div>
+          </div>
+          <div class="obj-item">
+            <div class="obj-trigger">Objection: "We already have someone doing this"</div>
+            <div class="quote-block">"That's great — are you happy with what you're getting from them? I ask because most businesses I talk to either have someone and it's working well — in which case I'd say stick with it — or they have someone and they're not really sure it's moving the needle. Which camp are you in?"</div>
+          </div>
+        </div>
+        <div class="note-block"><span class="nt">Psychology — the credibility flip</span>Asking "what went wrong" makes you the only person on the call not trying to convince them everything will be fine. That intellectual honesty is more persuasive than any testimonial. You're diagnosing before you're selling — which is what a trusted expert does, not a salesperson.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div><!-- /.main -->
+
+<!-- ═══════════════════════════ PIVOT MODAL ═══════════════════════════ -->
+<div class="modal-overlay" id="modal-overlay" onclick="handleOverlayClick(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕ Close</button>
+    <div class="modal-eyebrow" id="modal-eyebrow"></div>
+    <div class="modal-title" id="modal-title"></div>
+    <div class="modal-signal" id="modal-signal"></div>
+    <div class="modal-steps" id="modal-steps"></div>
+  </div>
+</div>
+
+<script>
+// ── Panel navigation ──
+function showPanel(id, btn) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ── Step accordion ──
+function toggleStep(header) {
+  header.parentElement.classList.toggle('open');
+}
+
+// ── Pivot table filter ──
+function filterPivots(from, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#pivot-tbody tr').forEach(row => {
+    if (from === 'all' || row.dataset.from === from) {
+      row.classList.remove('pr-hidden');
+    } else {
+      row.classList.add('pr-hidden');
+    }
+  });
+}
+
+// ── Pivot modal data ──
+const pivotData = {
+  'meta-to-web': {
+    title: 'Pivot: Meta Ads → Web Design',
+    signal: '"We don\'t have a website" / "We just send people to our Facebook page" / "Our site is really basic"',
+    from: 'Meta Ads', fromClass: 'from-meta',
+    to: 'Web Design', toClass: 'to-web',
+    steps: [
+      {
+        num: 1, label: 'Bridge Line', title: 'Surface the traffic problem — don\'t kill the ads conversation yet',
+        say: '"That actually changes things a bit — because the ad is only half the job. The click is the easy part. What happens when someone lands is where you win or lose the lead. Where are you sending people right now when they click the ad?"',
+        tip: 'Don\'t abandon the Meta pitch immediately. First diagnose where the traffic goes. Their answer tells you whether you\'re pivoting to web design or just adjusting the landing page conversation.'
+      },
+      {
+        num: 2, label: 'Four W — Web Version', title: 'Qualify the site situation before you present',
+        say: '"What does the site actually look like right now — when did it last get a proper update? ... Where are people landing when they come from social — homepage, a specific page, nowhere? ... Why do you think the site isn\'t doing the job — is it the design, the copy, or it\'s just not clear what someone\'s supposed to do when they land? ... What if you had a site that converted even 30% of your ad traffic into actual enquiries — what would that change for the business monthly?"',
+        tip: 'W4 here should tie back to the original ads conversation — the dream outcome is a full funnel working together. Plant that seed.'
+      },
+      {
+        num: 3, label: 'Present', title: 'The site activates the ads — without it the spend is wasted',
+        say: '"Here\'s the reality — running ads to a page that can\'t convert is like running a TV commercial with no phone number. The ad brings the traffic but the site is where the lead either happens or doesn\'t. What I\'d do for you is build a site specifically designed to convert [type of business] traffic — clear messaging, one primary action, fast load, trust signals. Once that\'s in place, every penny you spend on ads actually turns into leads instead of clicks that go nowhere."',
+        tip: 'Frame the site as the thing that makes the ads work — not a separate pitch. You\'re completing the system, not changing the subject.'
+      },
+      {
+        num: 4, label: 'Close', title: 'Fix the foundation first — then the ads amplify it',
+        say: '"Would you be against starting with the site first so we have somewhere to actually send the traffic that converts? Once that\'s live, the Meta ads become the thing that amplifies it. Right now you\'d be spending on ads with nowhere for the lead to land — we fix that first, then we turn the ads on properly."',
+        tip: '"Fix the foundation first" positions you as the long-term partner, not a single-service vendor. The client who buys web design from you today is the most likely client to come back for ads in 30 days.'
+      }
+    ]
+  },
+  'meta-to-social': {
+    title: 'Pivot: Meta Ads → Social Media',
+    signal: '"Our page looks empty" / "We barely post any content" / "Our Instagram is pretty dead"',
+    from: 'Meta Ads', fromClass: 'from-meta',
+    to: 'Social Media', toClass: 'to-social',
+    steps: [
+      {
+        num: 1, label: 'Bridge Line', title: 'Name the problem — a dead page kills ad conversions',
+        say: '"That\'s actually one of the most important things I need to flag before we go any further with ads — because it directly affects whether they work. Before someone clicks an ad, most people check the page behind it. If it looks inactive or empty, the trust isn\'t there and they don\'t click. Your page is essentially making your ad spend less efficient every single day it looks that way."',
+        tip: 'You\'re not abandoning the ads conversation — you\'re explaining why the social matters to the ads outcome. This keeps the business logic tight and doesn\'t feel like a random pivot to a new product.'
+      },
+      {
+        num: 2, label: 'Four W — Social Version', title: 'Qualify the social situation',
+        say: '"What does the content on the page actually look like — is it strategic or more just posting when you have something? ... Where are people discovering you right now outside of ads — is organic social any part of that? ... Why has the content side been difficult to stay on top of — time, not knowing what to post, or something else? ... What if your page was actively building trust with people before they even saw your ad — so when they did click, they were already half-sold — what would that change?"',
+        tip: 'The W4 here ties social directly to the ads outcome. When they answer, they\'re sold on both services at once.'
+      },
+      {
+        num: 3, label: 'Present', title: 'Social as the trust layer that makes ads work',
+        say: '"From what you told me — the ads are going to drive people to a page that doesn\'t look like an active, credible business. That\'s a trust problem and it\'ll cost you conversions before the click even happens. I manage social end to end — strategy, content, scheduling — so the page consistently looks like a business people want to engage with. The ads bring the traffic. The page builds the trust. Together they turn strangers into leads."',
+        tip: 'You\'re selling the complete system. Social + ads is a more compelling and higher-value offer than ads alone. Let them feel the completeness of it.'
+      },
+      {
+        num: 4, label: 'Close', title: 'Build the credibility layer before the ads go live',
+        say: '"Would you be against sorting the social side first so that when the ads go live, the page is actually working for you instead of against you? We get the content consistent, build some credibility in the feed, then activate the paid traffic on top of a page that already looks trusted. Would that make sense as the order?"',
+        tip: '"Would that make sense as the order" is a logical-agreement close. You\'re not asking them to buy — you\'re asking them to agree with a sequence that makes obvious sense.'
+      }
+    ]
+  },
+  'web-to-meta': {
+    title: 'Pivot: Web Design → Meta Ads',
+    signal: '"The site is fine — we just don\'t get any traffic" / "We have a good site but no one finds it"',
+    from: 'Web Design', fromClass: 'from-web',
+    to: 'Meta Ads', toClass: 'to-meta',
+    steps: [
+      {
+        num: 1, label: 'Bridge Line', title: 'Name the gap — a site with no traffic is a store with no customers',
+        say: '"That\'s the gap right there. A converting site with no traffic is like a store with no customers — the store is ready, you just need footfall. The site can do its job perfectly but if nobody\'s landing on it, none of that matters. Are you running any paid ads right now to bring people there?"',
+        tip: 'The "store with no customers" metaphor is concrete and immediate. Let it land before you say anything else.'
+      },
+      {
+        num: 2, label: 'Four W — Meta Version', title: 'Qualify the traffic problem',
+        say: '"What does your current lead situation look like — are you getting consistent enquiries or is it up and down? ... Where is most of your new business coming from — is any of it from paid traffic? ... Why hasn\'t paid ads been part of the plan so far — budget, not knowing if it\'d work, or something else? ... What if your site was getting 20, 30, 40 qualified visitors a week from ads and converting them at the rate it\'s built to — what would that mean for the business monthly?"',
+        tip: 'Frame W4 around the site they already have — they\'ve already invested in it. The ads are what activate that investment. That framing removes resistance.'
+      },
+      {
+        num: 3, label: 'Present', title: 'Ads are the traffic engine — the site is already the machine',
+        say: '"You\'ve already got the most important piece in place — a site that\'s built to convert. What\'s missing is the traffic. I build Meta campaigns with the right audience, right creative, and right offer — the leads hit your site and your site does its job. Within 30 to 60 days you go from relying on word of mouth to having a predictable pipeline. The site you\'ve already built starts actually paying for itself."',
+        tip: '"The site you\'ve already built" is doing a lot of work in this sentence — it acknowledges their investment and frames ads as the activation, not a separate sell.'
+      },
+      {
+        num: 4, label: 'Close', title: 'Activate the site you\'ve already invested in',
+        say: '"You\'ve already invested in the right site. The Meta ads is what turns it on. Without traffic, the site just sits there. Would you be against adding the ad side this week so the site you\'ve already built actually starts bringing in leads on its own?"',
+        tip: '"The site you\'ve already built" creates consistency and makes the Meta ads feel like the logical next chapter of the same story, not a completely new pitch.'
+      }
+    ]
+  },
+  'web-to-social': {
+    title: 'Pivot: Web Design → Social Media',
+    signal: '"We get traffic from Instagram but nothing converts on the site" / "People come from social but don\'t enquire"',
+    from: 'Web Design', fromClass: 'from-web',
+    to: 'Social Media', toClass: 'to-social',
+    steps: [
+      {
+        num: 1, label: 'Bridge Line', title: 'The social-to-site handoff is where the lead gets lost',
+        say: '"The social-to-site handoff is everything — and when it breaks, most people blame the site. But the real issue is usually that the content isn\'t setting up the expectation correctly before people click. What they see on Instagram and what they land on have to feel like the same conversation. Tell me — what does the content on Instagram actually look like right now?"',
+        tip: 'Don\'t jump straight to selling social management. First validate that you understand where the break is. You need them to feel understood before they\'ll accept a new recommendation.'
+      },
+      {
+        num: 2, label: 'Four W — Social Version', title: 'Diagnose the content strategy gap',
+        say: '"What does the Instagram content actually look like — is it strategic or more just posting when you have something to share? ... Where are those social visitors coming from — organic reach, stories, or paid? ... Why do you think the content isn\'t setting up the conversion — is it the type of posts, the calls to action, or the tone doesn\'t match what they find on the site? ... What if your content was specifically designed to move people from curious to ready to book before they even hit the site — what would that change?"',
+        tip: 'W4 should get them to see social as a pre-sale tool. By the time someone clicks through, they should already be 80% decided. The site just confirms what they already know.'
+      },
+      {
+        num: 3, label: 'Present', title: 'Social as the pre-sale engine — content sells before the click',
+        say: '"From what you told me — the Instagram is getting people interested but not sold. That\'s a content strategy problem. I manage social end to end and the strategy is built around moving people through three stages: awareness, then trust, then action. By the time they click your link, they\'re already 80% decided. The site just confirms what they already believe. When that handoff works properly, the site stops getting blamed for a problem that was actually happening upstream."',
+        tip: '"Stops getting blamed for an upstream problem" is a reframe that makes them feel understood, not sold to. You diagnosed correctly. Now they trust your recommendation.'
+      },
+      {
+        num: 4, label: 'Close', title: 'Fix the top of the funnel — the site will convert it',
+        say: '"Right now you\'ve got half a funnel — social gets attention, but it isn\'t converting it into intent before the click. Social management fixes the top of that funnel so your site stops being asked to do a job that social should have already done. Would you be against starting with the social side so every visitor who hits your site is already warm when they land?"',
+        tip: '"Every visitor who hits your site is already warm" is the compelling image. They can visualise it. Let them sit with it for a second before you say anything else.'
+      }
+    ]
+  },
+  'social-to-meta': {
+    title: 'Pivot: Social Media → Meta Ads',
+    signal: '"We boost posts" / "We run ads but can\'t tell if they\'re working"',
+    from: 'Social Media', fromClass: 'from-social',
+    to: 'Meta Ads', toClass: 'to-meta',
+    steps: [
+      {
+        num: 1, label: 'Bridge Line', title: 'Separate boosting from real campaigns — they are completely different things',
+        say: '"Boosting posts is not the same as running Meta ads — and this is one of the most common things I come across. Boosting is the most expensive way to get visibility with almost zero ROI because there\'s no proper objective, no audience targeting, no creative structure, and no conversion tracking. Real Meta campaigns are a completely different thing. What you\'ve been running and what I build are two different products entirely."',
+        tip: 'Don\'t be condescending about the boosting. Frame it as an industry truth that most people don\'t know — not a personal criticism. You\'re educating, not judging.'
+      },
+      {
+        num: 2, label: 'Four W — Meta Version', title: 'Qualify for paid ads',
+        say: '"When you\'ve boosted before — what was the objective you actually set? ... Where are your leads coming from right now outside of social — any paid traffic at all? ... Why do you think the boosts haven\'t converted — was it the targeting, the creative, or you just couldn\'t track it? ... What if you had real Meta campaigns generating qualified leads every week on top of what your social is already doing — what would that change?"',
+        tip: 'Frame W4 as a stacking question — ads ON TOP of social, not instead of it. You\'re adding to what\'s working, not replacing it. That makes the ask feel much smaller.'
+      },
+      {
+        num: 3, label: 'Present', title: 'Ads as the paid amplifier — social is the long game, ads are the short game',
+        say: '"Here\'s how I think about it: social builds trust over time — it\'s the long game. Meta ads are the short game — they put you in front of people who are ready to buy right now, today, not six months from now. The two together is where you get real velocity. I build structured campaigns with proper creative, targeting, and conversion tracking so you can see what\'s working. Within 30 to 60 days you know your cost per lead and you have a system you can scale."',
+        tip: 'Position this as a system upgrade, not a brand new thing to manage. The social is already doing its job — the ads amplify the results.'
+      },
+      {
+        num: 4, label: 'Close', title: 'Turn the social authority into leads on demand',
+        say: '"You\'re already building authority with the social side — that\'s the foundation. Meta ads is how you take that authority and put it in front of the right people at scale. Would you be against adding the ad side this week so the work you\'re already doing on social actually starts generating leads on demand instead of just building a following?"',
+        tip: '"The work you\'re already doing" validates their social effort and makes ads feel like the logical next step, not a brand new investment to justify.'
+      }
+    ]
+  },
+  'social-to-web': {
+    title: 'Pivot: Social Media → Web Design',
+    signal: '"We send people to the website but nothing happens" / "People DM us but don\'t convert when they hit the site"',
+    from: 'Social Media', fromClass: 'from-social',
+    to: 'Web Design', toClass: 'to-web',
+    steps: [
+      {
+        num: 1, label: 'Bridge Line', title: 'Name the leak — the social is working, the site is where it\'s dying',
+        say: '"Then the site is the leak, not the social. You\'re already doing the hard part — getting people interested and getting the click. But if the site isn\'t converting when they land, all that effort disappears the moment they get there. You\'re filling a bucket with a hole in it. The social is fine. We need to fix the hole."',
+        tip: 'The "bucket with a hole" metaphor is vivid and memorable. Let them sit with it. Don\'t immediately move on — silence after a strong metaphor gives it time to land.'
+      },
+      {
+        num: 2, label: 'Four W — Web Version', title: 'Qualify the conversion problem',
+        say: '"What does the site look like right now — when did it last get a proper update? ... Where do people land when they click from social — homepage or a specific page? ... Why do you think people leave without contacting you — is it the design, the copy, it\'s not clear what to do, or a bit of all three? ... What if the site converted even 20% of those social visitors into enquiries — what would that be worth to the business monthly?"',
+        tip: 'W4 connects directly to the social traffic they\'re already generating. This is a highly concrete ROI question — they know how many people come from social, so they can actually calculate the number. Let them.'
+      },
+      {
+        num: 3, label: 'Present', title: 'The site is the conversion layer — the social is already delivering traffic',
+        say: '"From what you described — you\'ve got the traffic. The social is working. The site is where the lead is getting lost. What I build is designed specifically to convert that traffic: clear messaging, one primary action, trust signals, fast load. The businesses I work with go from \'people visit but don\'t contact us\' to the site being their number one lead source within 60 to 90 days. The social you\'re already doing starts actually turning into bookings."',
+        tip: 'Lead with their social as the proof that the system can work — they\'re already getting traffic. You just need to fix where it\'s going.'
+      },
+      {
+        num: 4, label: 'Close', title: 'The social is already doing its job — fix the thing that isn\'t',
+        say: '"You\'ve already done the hardest part — you\'re getting people to click. Right now that traffic is being wasted by a site that doesn\'t convert it. Would you be against investing in fixing that this week so the social work you\'re already doing actually starts turning into bookings instead of bounces?"',
+        tip: '"The social work you\'re already doing" is validating and creates urgency — they\'re already spending time on social. The site is the only thing standing between them and results. Frame it exactly that way.'
+      }
+    ]
+  }
+};
+
+function openModal(id) {
+  const d = pivotData[id];
+  if (!d) return;
+
+  const colorMap = {
+    'from-meta':   { bg: 'var(--gold-dim)',   color: 'var(--gold)',   border: 'var(--gold-border)'   },
+    'to-meta':     { bg: 'var(--gold-dim)',   color: 'var(--gold)',   border: 'var(--gold-border)'   },
+    'from-web':    { bg: 'var(--blue-dim)',   color: 'var(--blue)',   border: 'var(--blue-border)'   },
+    'to-web':      { bg: 'var(--blue-dim)',   color: 'var(--blue)',   border: 'var(--blue-border)'   },
+    'from-social': { bg: 'var(--green-dim)',  color: 'var(--green)',  border: 'var(--green-border)'  },
+    'to-social':   { bg: 'var(--green-dim)',  color: 'var(--green)',  border: 'var(--green-border)'  }
+  };
+
+  const fc = colorMap[d.fromClass], tc = colorMap[d.toClass];
+
+  document.getElementById('modal-eyebrow').innerHTML =
+    `<span class="from-pill" style="background:${fc.bg};color:${fc.color};border:1px solid ${fc.border}">${d.from}</span>
+     <span style="color:var(--text3);font-size:14px">→</span>
+     <span class="to-pill" style="background:${tc.bg};color:${tc.color};border:1px solid ${tc.border}">${d.to}</span>`;
+
+  document.getElementById('modal-title').textContent = d.title;
+  document.getElementById('modal-signal').innerHTML = `Signal: <strong>${d.signal}</strong>`;
+
+  document.getElementById('modal-steps').innerHTML = d.steps.map(s => `
+    <div class="modal-step">
+      <div class="modal-step-header">
+        <div class="modal-step-num">${s.num}</div>
+        <div>
+          <div class="modal-step-label">${s.label}</div>
+          <div class="modal-step-title">${s.title}</div>
+        </div>
+      </div>
+      <span class="label-tag mt-say">Say this</span>
+      <div class="modal-say">${s.say}</div>
+      <div class="modal-note"><span class="modal-note-label">Coaching tip</span>${s.tip}</div>
+    </div>
+  `).join('');
+
+  document.getElementById('modal-overlay').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+}
+
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('modal-overlay')) closeModal();
+}
+</script>
+</body>
+</html>
